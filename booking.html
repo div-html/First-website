@@ -1,0 +1,178 @@
+<html>
+<title>Home</title>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+    nav a {
+        text-decoration: none;
+        color: Black;
+        font-family: "Playfair Display", serif;
+        font-style: normal;
+        font-size: 20px;
+        padding: 3px;
+        text-align: right;
+    }
+    .navi {
+        margin-right: 10px;
+    }
+    a:hover {
+        color: cornflowerblue;
+    }
+    .navigation {
+        background-color:  blanchedalmond;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-size: 100%;
+    }
+    .nav-items {
+        display: flex;
+        gap: 10px;
+    }
+    .head {
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-size: 27px;
+        font-style: normal;
+        margin-left: 20%;
+    }
+    .Bullet {
+        margin-top: 20px;
+        font-size: 34px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .Bullet li {
+        color: red;
+    }
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        width: 350px;
+        text-align: center;
+        margin: 20px auto;
+    }
+    input, button {
+        padding: 10px;
+        margin: 5px 0;
+        width: 80%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    button {
+        background: #6c63ff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    button:hover {
+        background: #574fd6;
+    }
+    .output {
+        margin-top: 15px;
+        color: #333;
+        font-weight: bold;
+    }
+    .heading{
+        background-color: #fff;
+        border-radius: 4px;
+        padding-bottom: 40px;
+        padding-top: 20px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+    .heading h3{
+        font-family:"Poppins",sans-serif;
+        text-align: center;
+        margin-top:10px ;
+        margin-bottom: 10px;
+        font-size: 2rem;
+        font-weight: normal;
+        background: linear-gradient(to right, lightsalmon, #81c784);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .heading p{
+        font-family:"Dancing Script", cursive;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+    
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+
+<body>
+    <div class="navigation">
+        <div class="logo">
+            <img style="margin-top: 20px;" height="85" width="200" src="https://logodix.com/logo/971485.png" alt="logo">
+        </div>
+        <div class="head">
+            <p>Paradise Hotel <br> To Live in Peace.</p>
+        </div>
+        <div class="nav-items">
+            <nav>
+                <a class="navi" href="index.html">Home</a>
+                <a class="navi" href="rooms.html">Rooms</a>
+                <a class="navi" href="booking.html">Booking</a>
+                <a class="navi" href="services.php">Services</a>
+                <a href="http://localhost/Php/domain/login.php">Login</a>
+            </nav>
+        </div>
+    </div>
+    <div class="heading">
+    <h3>Book</h3>
+    <p class="heading1">Your Stay ! </p>
+    
+  </div>
+    <div class="card">
+        <h2>Check Room Availability</h2>
+        <input type="number" id="guests" placeholder="Number of Guests">
+        <button onclick="checkRooms()">Check</button>
+            <a class="data" href="http://localhost/Php/domain/databaseOutput.php"><button>View Guests</button></a>
+        <div class="output" id="result"></div>
+    </div>
+
+<script>
+    var availableRooms = 6;
+
+    function checkRooms() {
+        var guests = parseInt(document.getElementById('guests').value);
+        var resultDiv = document.getElementById('result');
+
+        if (isNaN(guests) || guests <= 0) {
+            resultDiv.innerText = "Enter a valid number of guests!";
+            return;
+        }
+
+        var roomsAssigned = 0;
+        for (var i = 1; i <= availableRooms; i++) {
+            if (i <= guests) {
+                roomsAssigned++;
+            }
+        }
+
+        if (roomsAssigned < guests) {
+            resultDiv.innerText = "Only " + roomsAssigned + " rooms available for " + guests + " guests.";
+        } else {
+            resultDiv.innerText = "Rooms successfully allocated for " + guests + " guests!";
+            bookedRooms += guests;
+            availableRooms = totalRooms - bookedRooms;
+        }
+    }
+</script>
+
+</body>
+</html>

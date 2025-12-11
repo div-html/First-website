@@ -1,0 +1,41 @@
+body{
+    background-color: aliceblue;
+}
+.changemode{
+    background-color: bisque;
+}
+.container{
+    width: 350px;     
+    height: 250px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    gap: 10vh;
+    border: 1px solid white;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+   border-radius: 7px;
+   
+}
+.navigation nav{
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: lightseagreen;
+    font-size: large;
+
+}
+
+marquee{
+    background-color: lightblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    width: 100%;
+}
+.buttons{
+    display: flex ;
+    justify-content: space-between;
+}

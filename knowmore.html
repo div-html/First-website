@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Info</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+       background: linear-gradient(to bottom, #ffd6ba, #fff1e6);
+
+
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+      width: 350px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 15px;
+      color: #2193b0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    td {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #e67e22;
+    }
+    button{
+      margin-top:20px;
+      background-color: #2193b0;
+      padding: 10px;
+      border-color: #2193b0;
+      border-radius: 20px;
+      width: 100%;
+      color: #fff;
+      
+    }
+    button:hover{
+      background-color: aquamarine;
+      cursor: pointer;
+      border-color: aquamarine;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2 id="hotelName"></h2>
+    <table>
+      <tr><td>Total Rooms</td><td id="totalRooms"></td></tr>
+      <tr><td>Booked Rooms</td><td id="bookedRooms"></td></tr>
+      <tr><td>Available Rooms</td><td id="availableRooms"></td></tr>
+      <tr><td>Price per Room</td><td id="roomPrice"></td></tr>
+      <tr><td>Discounted Price</td><td id="discountedPrice" class="highlight"></td></tr>
+      <tr><td>Total Income</td><td id="totalIncome"></td></tr>
+      <tr><td>Occupancy Rate</td><td id="occupancy"></td></tr>
+    </table>
+    <a href="index.html"><button>Go Back</button></a>
+  </div>
+
+<script>
+  let hotelName = "Paradise Hotel";
+  let totalRooms = 50;
+  let bookedRooms = 30;
+
+  let availableRooms = totalRooms - bookedRooms;
+  let newBooking = 5;
+  bookedRooms += newBooking;
+  availableRooms = totalRooms - bookedRooms;
+
+  let roomPrice = 2000;
+  let totalIncome = bookedRooms * roomPrice;
+
+  let discount = 0.1;
+  let discountedPrice = roomPrice - (roomPrice * discount);
+
+  let occupancy = (bookedRooms / totalRooms) * 100;
+
+  document.getElementById("hotelName").innerText = hotelName;
+  document.getElementById("totalRooms").innerText = totalRooms;
+  document.getElementById("bookedRooms").innerText = bookedRooms;
+  document.getElementById("availableRooms").innerText = availableRooms;
+  document.getElementById("roomPrice").innerText = "₹ " + roomPrice;
+  document.getElementById("discountedPrice").innerText = "₹ " + discountedPrice;
+  document.getElementById("totalIncome").innerText = "₹ " + totalIncome;
+  document.getElementById("occupancy").innerText = occupancy.toFixed(2) + "%";
+</script>
+
+</body>
+</html>

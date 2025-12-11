@@ -1,0 +1,270 @@
+<html>
+<title>Home</title>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: Black;
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-size: 20px;
+        padding: 3px;
+        text-align: right;
+
+    }
+
+    .navi {
+        margin-right: 10px;
+    }
+
+    a:hover {
+        color: cornflowerblue;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+       
+        background-color: blanchedalmond;
+    }
+
+    .nav-items {
+        display: flex;
+        gap: 10px;
+    }
+
+    .head {
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-size: 27px;
+        font-style: normal;
+        margin-left: 20%;
+    }
+    .rooms{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    body {
+        background-color: #eae7dc;
+    }
+    .rooms > div{
+        border:1px solid #dee2e6;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        flex: 0 0 30vw;
+    }
+    .rooms>div>p{
+        text-align: center;
+        font-family: "DM Sans", sans-serif;
+        margin: 5px ;
+    }
+    .rooms>div>div>p{
+        font-family:"DM Sans", sans-serif;
+        font-size: 0.9rem;
+        color: darkgray;
+    }
+    .rooms>div>h3{
+        margin: 5px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .rooms > div > img{
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 2px;
+        height: 30vh;
+    }
+ 
+.room-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    flex: 1 1 calc(33% - 20px);
+    padding: 10px;
+}
+
+.room-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.room-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+    .book{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+    }
+     button{
+        padding: 5px;
+        background-color: white;
+        border: 1px solid paleturquoise;
+        border-radius: 2px;
+    }
+    button:hover{
+        background-color: paleturquoise;
+        cursor:pointer;
+    }
+    .heading{
+        background-color: #fff;
+        border-radius: 4px;
+        padding-bottom: 40px;
+        padding-top: 20px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+    .heading h3{
+        font-family:"Poppins",sans-serif;
+        text-align: center;
+        margin-top:10px ;
+        margin-bottom: 10px;
+        font-size: 2rem;
+        font-weight: normal;
+        background: linear-gradient(to right, lightsalmon, #81c784);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .heading p{
+        font-family:"Dancing Script", cursive;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+    .view button:hover{
+        background-color: paleturquoise;
+    }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+
+<body>
+    <div class="navigation">
+        <div class="logo">
+            <img style="margin-top: 20px;" height="85" width="200" src="https://logodix.com/logo/971485.png" alt="logo">
+        </div>
+        <div class="head">
+            <p>Paradise Hotel <br> To Live in Peace.</p>
+        </div>
+
+        <div class="nav-items">
+            <nav>
+                <a class="navi" href="index.html">Home</a>
+                <a class="navi" href="rooms.html">Rooms</a>
+                <a class="navi" href="booking.html">Booking</a>
+                <a class="navi" href="services.php">Services</a>
+                <a href="http://localhost/Php/domain/login.php">Login</a>
+            </nav>
+
+        </div>
+
+
+    </div>
+  <div >
+
+  </div>
+  <div class="heading">
+        <h3>Pricing</h3>
+        <p class="heading1">Luxury That Fits Your Budget! </p>
+        <div class="view" style="display: flex; justify-content: center; margin-top: 18px;">
+                <a href="http://localhost/Php/domain/hotel_demo.php"><button style="padding: 6px 18px; font-size: 1rem; border-radius: 2px; background-color: white; border: 1px solid paleturquoise;">View Details</button></a>
+        </div>
+    </div>
+<div class="rooms">
+    <div class="room-card">
+    <h3>Deluxe Room</h3>
+    <img src="https://www.theparkhotels.com/images/site-specific/banglore/rooms/luxury_terrace.jpg" alt="">
+    <p>Experience luxury and comfort with panoramic views, plush <br>bedding, and elegant decor designed for a perfect getaway.</p>
+        <div class="book">
+            <a href="booking.html"><button>Book</button></a>
+            <p>$250/Night</p>
+        </div>
+         
+    </div>
+    <div class="room-card">
+    <h3>Double Room</h3>
+    <img src="https://roomraccoon.com/wp-content/uploads/2024/06/DOUBLE-ROOM-FEATURED-BLOG-IMAGES-3.png" alt="">
+    <p>Spacious and cozy, ideal for couples or friends, featuring <br>modern amenities and a warm, welcoming atmosphere.</p>
+        <div class="book">
+            <a href="booking.html"><button>Book</button></a>
+            <p>$250/Night</p>
+        </div>
+    </div>
+    <div class="room-card">
+    <h3>Single Room</h3>
+    <img src="https://images.unsplash.com/photo-1512918580421-b2feee3b85a6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2luZ2xlJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+    <p>A stylish and comfortable retreat for solo travelers, offering <br>privacy and all the essentials for a relaxing stay.</p>
+        <div class="book">
+            <a href="booking.html"><button>Book</button></a>
+            <p>$250/Night</p>
+        </div>
+    </div>
+</div>
+<div class="rooms">
+    <div class="room-card">
+    <h3>Deluxe Room</h3>
+    <img src="https://www.theparkhotels.com/images/site-specific/banglore/rooms/luxury_terrace.jpg" alt="">
+    <p>Experience luxury and comfort with panoramic views, plush<br> bedding, and elegant decor designed for a perfect getaway.</p>
+        <div class="book">
+            <a href="booking.html"><button>Book</button></a>
+            <p>$250/Night</p>
+        </div>
+         
+    </div>
+    <div class="room-card">
+    <h3>Double Room</h3>
+    <img src="https://www.residenthotels.com/wp-content/uploads/2022/06/The-Resident-Victoria-Double.jpg" alt="">
+    <p>Spacious and cozy, ideal for couples or friends, featuring<br> modern amenities and a warm, welcoming atmosphere.</p>
+        <div class="book">
+            <a href="booking.html"><button>Book</button></a>
+            <p>$250/Night</p>
+        </div>
+    </div>
+    <div class="room-card">
+    <h3>Single Room</h3>
+    <img src="https://www.theparkhotels.com/images/site-specific/banglore/rooms/luxury_terrace.jpg" alt="">
+    <p>A stylish and comfortable retreat for solo travelers, offering<br> privacy and all the essentials for a relaxing stay.</p>
+        <div class="book">
+            <a href="booking.html"><button>Book</button></a>
+            <p>$250/Night</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
